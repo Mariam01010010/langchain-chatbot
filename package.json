@@ -1,0 +1,35 @@
+{
+  "name": "langchain-bot-taylor-swift",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "type": "module",
+  "target": "ES2020",
+  "module": "nodenext",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mariam01010010/langchain-chatbot.git"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "keywords": [],
+  "author": "",
+  "bugs": {
+    "url": "https://github.com/Mariam01010010/langchain-chatbot/issues"
+  },
+  "homepage": "https://github.com/Mariam01010010/langchain-chatbot#readme",
+  "dependencies": {
+    "dotenv": "^16.3.1",
+    "faiss-node": "^0.2.1",
+    "openai": "^3.3.0",
+    "@langchain/google-genai": "^0.0.2",
+    "langchain": "0.0.207"
+  },
+  "overrides": {
+    "@langchain/core": "0.1.5"
+  }
+}
