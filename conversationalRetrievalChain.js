@@ -119,4 +119,23 @@ const result2 = await conversationalRetrievalChain.invoke({
   input: "tell me how",
 });
 
-console.log(result2.answer);
+// console.log(result2.answer);
+
+// AGENT
+/* an agent - where the LLM decides what steps to take 
+One of the first things to do when building an agent is to decide what tools it should have access to. 
+For this example, we will give the agent access two tools:
+
+1. The retriever we just created. This will let it easily answer questions about LangSmith
+2. A search tool. This will let it easily answer questions that require up to date information.
+
+*/
+
+// Set up a tool for the retriever we just created:
+import { createRetrieverTool } from "langchain/tools/retriever";
+
+const retrieverTool = await createRetrieverTool(retriever, {
+  name: "langsmith_search",
+  description:
+    "Search for information about LangSmith. For any questions about LangSmith, you must use this tool!",
+});
